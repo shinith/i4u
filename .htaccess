@@ -1,0 +1,179 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /i4u/
+
+ErrorDocument 404 /notfound.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^mobile$ innerpage.php?id=1 [QSA,L]
+RewriteRule ^tablet$ innerpage.php?id=2 [QSA,L]
+RewriteRule ^laptop$ innerpage.php?id=3 [QSA,L]
+
+
+
+
+
+
+
+RewriteRule ^about-my-plant-my-taste$ about-us.php [QSA,L]
+RewriteRule ^outdor-plants$ product-list.php?nature=0 [QSA,L]
+RewriteRule ^indoor-plants$ product-list.php?nature=1 [QSA,L]
+RewriteRule ^plant-list/([^/]*)$ product-list.php?page=$1 [QSA,L]
+RewriteRule ^plant-list$ product-list.php [L,QSA]
+RewriteRule ^plant-list/([\w-]+)/([^/]*)$ product-list.php?page=$1&cat=$2 [L,QSA]
+RewriteRule ^plant-details/([^/]*)$ product-detail.php?slug=$1 [QSA,L]
+RewriteRule ^my-cart$ cart.php [QSA,L]
+RewriteRule ^confirm-order$ checkout.php [QSA,L]
+RewriteRule ^create-account$ register.php [QSA,L]
+RewriteRule ^login$ login.php [QSA,L]
+RewriteRule ^play-quiz$ quiz-page.php [QSA,L]
+RewriteRule ^doctor-corner$ doctor-corner.php [QSA,L]
+RewriteRule ^doctor-corner-feedback$ doctor-corner.php?feedback=submitted [QSA,L]
+RewriteRule ^my-profile$ my-profile.php [QSA,L]
+RewriteRule ^my-orders$ my-profile.php?tab=tabOrderclk [QSA,L]
+RewriteRule ^my-coupons$ my-profile.php?tab=tabCouponclk [QSA,L]
+
+RewriteRule ^payment-success$ pay-success.php [QSA,L]
+RewriteRule ^payment-cancel$ pay-cancel.php [QSA,L]
+RewriteRule ^payment-failed$ pay-faild.php [QSA,L]
+RewriteRule ^contact-us$ contact-us.php [QSA,L]
+RewriteRule ^book-palnts-for-occations$ book-palnts-for-occations.php [QSA,L]
+RewriteRule ^surprise-gifts-plants$ surprise-gifts-plants.php [QSA,L]
+RewriteRule ^house-warming-plants$ house-warming-plants.php [QSA,L]
+RewriteRule ^birthday-plants$ birthday-plants.php [QSA,L]
+RewriteRule ^wedding-plants$ wedding-plants.php [QSA,L]
+RewriteRule ^blog$ blog-list.php [QSA,L]
+RewriteRule ^blog/([\w-]+)$ blog-detail.php?slug=$1 [QSA,L]
+
+RewriteRule ^store/login$ store/login.php [QSA,L]
+RewriteRule ^store/reset-password$ store/su-login.php?action=forget [QSA,L]
+RewriteRule ^store/logout$ store/logout.php [QSA,L]
+RewriteRule ^store/dashboard$ store/index.php [QSA,L]
+RewriteRule ^store/categories$ store/categories.php [QSA,L]
+RewriteRule ^store/plants$ store/plants.php [QSA,L]
+RewriteRule ^store/create-plant$ store/create-plant.php [QSA,L]
+RewriteRule ^store/update-plant/([^/]*)$ store/create-plant.php?plid=$1 [QSA,L]
+RewriteRule ^store/quiz-questions$ store/quiz.php [QSA,L]
+RewriteRule ^store/blogs$ store/blogs.php [QSA,L]
+RewriteRule ^store/customer-review$ store/reviews.php [QSA,L]
+RewriteRule ^store/create-blog$ store/create-blog.php [QSA,L]
+RewriteRule ^store/update-blog/([^/]*)$ store/create-blog.php?id=$1 [QSA,L]
+RewriteRule ^store/orders$ store/orders.php [QSA,L]
+RewriteRule ^store/order-details/([^/]*)$ store/order-details.php?id=$1 [QSA,L]
+
+
+RewriteRule ^video-page$ video-page.php [QSA,L]
+
+
+
+
+
+
+
+
+
+
+
+RewriteRule ^registration$ registration.php [QSA,L]
+RewriteRule ^registration/$ registration.php [QSA,L]
+RewriteRule ^activate/([\w-]+)/([^/]*)$ activate.php?userid=$2&id=$1 [L,QSA]
+RewriteRule ^meet-us$ meet-us.php [L,QSA]
+RewriteRule ^about-us$ about-us.php [L,QSA]
+RewriteRule ^blog$ blog.php [L,QSA]
+RewriteRule ^blog/([\w-]+)$ blog-detail.php?slug=$1 [L,QSA]
+RewriteRule ^career$ career.php [L,QSA]
+RewriteRule ^privacy-policy$ privacy-policy.php [L,QSA]
+RewriteRule ^refund-policy$ refund-policy.php [L,QSA]
+RewriteRule ^terms-and-conditions$ terms-and-conditions.php [L,QSA]
+
+RewriteRule ^set-password/([^/]+)/([^/]+)$ set-password.php?usrid=$2&id=$1 [L,QSA]
+RewriteRule ^private-limited-company$ private-limited-company.php?slug=$1 [QSA,L]
+RewriteRule ^limited-liability-partnership$ limited-liability-partnership.php?slug=$1 [QSA,L]
+RewriteRule ^one-person-company$ one-person-company.php?slug=$1 [QSA,L]
+RewriteRule ^partnership-firm$ partnership-firm.php?slug=$1 [QSA,L]
+RewriteRule ^public-limited-company$ public-limited-company.php?slug=$1 [QSA,L]
+RewriteRule ^proprietorship$ proprietorship.php?slug=$1 [QSA,L]
+RewriteRule ^foreign-subsidary-company$ foreign-subsidary-company.php?slug=$1 [QSA,L]
+RewriteRule ^gst-registration$ gst-registration.php?slug=$1 [QSA,L]
+RewriteRule ^service-tax-registration$  service-tax-registration.php?slug=$1 [QSA,L]
+RewriteRule ^trademark-registration$ trademark-registration.php?slug=$1 [QSA,L]
+RewriteRule ^copyright-registration$ copyright-registration.php?slug=$1 [QSA,L]
+RewriteRule ^vat-registration$ vat-registration.php?slug=$1 [QSA,L]
+RewriteRule ^professional-tax-registration$ professional-tax-registration.php?slug=$1 [QSA,L]
+RewriteRule ^import-export-code-registration$ import-export-code-registration.php?slug=$1 [QSA,L]
+RewriteRule ^shops-establishment-license$ shops-establishment-license.php?slug=$1 [QSA,L]
+RewriteRule ^esi-registration$ esi-registration.php?slug=$1 [QSA,L]
+RewriteRule ^pf-registration$ pf-registration.php?slug=$1 [QSA,L]
+RewriteRule ^trade-license$ trade-license.php?slug=$1 [QSA,L]
+RewriteRule ^respond-to-notice$ respond-to-notice.php?slug=$1 [QSA,L]
+RewriteRule ^income-tax-return-filing$ income-tax-return-filing.php?slug=$1 [QSA,L]
+RewriteRule ^tds-return$ tds-return.php?slug=$1 [QSA,L]
+RewriteRule ^vat-sales-tax-return$ vat-sales-tax-return.php?slug=$1 [QSA,L]
+RewriteRule ^service-tax-returns-filing$ service-tax-returns-filing.php?slug=$1 [QSA,L]
+RewriteRule ^esi-return$ esi-return.php?slug=$1 [QSA,L]
+RewriteRule ^patent-registration$ patent-registration.php?slug=$1 [QSA,L]
+RewriteRule ^llp-agreement$ llp-agreement.php?slug=$1 [QSA,L]
+RewriteRule ^partnership-deep$ partnership-deep.php?slug=$1 [QSA,L]
+RewriteRule ^rental-agreement$ rental-agreement.php?slug=$1 [QSA,L]
+RewriteRule ^for-pvt-ltd-company$ for-pvt-ltd-company.php?slug=$1 [QSA,L]
+RewriteRule ^for-llp-company$ for-llp-company.php?slug=$1 [QSA,L]
+RewriteRule ^maintain-your-accounts$ maintain-your-accounts.php?slug=$1 [QSA,L]
+RewriteRule ^payroll-service$ payroll-service.php?slug=$1 [QSA,L]
+RewriteRule ^projected-financials$ projected-financials.php?slug=$1 [QSA,L]
+RewriteRule ^register-charges-for-bank-loan$ register-charges-for-bank-loan.php?slug=$1 [QSA,L]
+RewriteRule ^increase-in-authorised-capital$ increase-in-authorised-capital.php?slug=$1 [QSA,L]
+RewriteRule ^change-of-address$ change-of-address.php?slug=$1 [QSA,L]
+RewriteRule ^change-of-director$ change-of-director.php?slug=$1 [QSA,L]
+RewriteRule ^change-of-company$ change-of-company.php?slug=$1 [QSA,L]
+RewriteRule ^partnership-to-LLP$ partnership-to-LLP.php?slug=$1 [QSA,L]
+RewriteRule ^closing-pvt-ltd-company$ closing-pvt-ltd-company.php?slug=$1 [QSA,L]
+RewriteRule ^ESOP$ ESOP.php?slug=$1 [QSA,L]
+RewriteRule ^sweat-enuity-shares$ sweat-enuity-shares.php?slug=$1 [QSA,L]
+RewriteRule ^partner-with-us$ partner-with-us.php?slug=$1 [QSA,L]
+RewriteRule ^fssai-license$ fssai-license.php?slug=$1 [QSA,L]
+RewriteRule ^search/([^/]*)$ search.php?slug=$1 [QSA,L]
+RewriteRule ^dashboard/profile$ dashboard/profile.php [QSA,L]
+RewriteRule ^dashboard/business-profile$ dashboard/view-company-profile.php [QSA,L]
+RewriteRule ^dashboard/update-business-profile$ dashboard/company-profile.php [QSA,L]
+RewriteRule ^dashboard/active-services$ dashboard/services-page.php [QSA,L]
+RewriteRule ^dashboard/add-service$ dashboard/add-service.php [QSA,L]
+RewriteRule ^dashboard/my-documents$ dashboard/document.php [QSA,L]
+RewriteRule ^dashboard/change-password$ dashboard/profile.php?action=pwd [QSA,L]
+
+RewriteRule ^dashboard/downloader/([^/]*)$ dashboard/download.php?id=$1 [QSA,L]
+
+
+RewriteRule ^login/$ login.php [QSA,L]
+
+RewriteRule ^forgot-password$ forgot-pwd.php [QSA,L]
+RewriteRule ^login$ login.php [QSA,L]
+RewriteRule ^logout$ logout.php [QSA,L]
+
+RewriteRule ^super/login$ dashboard/su-login.php [QSA,L]
+RewriteRule ^super/reset-password$ dashboard/su-login.php?action=forget [QSA,L]
+RewriteRule ^super/logout$ dashboard/su-logout.php [QSA,L]
+
+RewriteRule ^super/home$ dashboard/su-home.php [QSA,L]
+RewriteRule ^super/profile$ dashboard/su-profile.php [QSA,L]
+RewriteRule ^super/$ dashboard/su-home.php [QSA,L]
+RewriteRule ^super$ dashboard/su-home.php [QSA,L]
+RewriteRule ^super/users$ dashboard/users.php [QSA,L]
+RewriteRule ^super/comments$ dashboard/su-comments.php [QSA,L]
+RewriteRule ^super/pages$ dashboard/page-seo.php [QSA,L]
+RewriteRule ^super/blogs$ dashboard/su-blogs.php [QSA,L]
+RewriteRule ^super/create-blog$ dashboard/su-create-blog.php [QSA,L]
+RewriteRule ^super/update-blog/([^/]*)$ dashboard/su-create-blog.php?id=$1 [QSA,L]
+RewriteRule ^super/clients$ dashboard/clients.php [QSA,L]
+RewriteRule ^super/client-profile/([^/]+)$ dashboard/su-company-profile.php?id=$1 [QSA,L]
+RewriteRule ^super/change-password$ dashboard/su-profile.php?action=pwd [QSA,L]
+RewriteRule ^super/client-profile-update/([^/]+)$ dashboard/su-company-update.php?id=$1 [QSA,L]
+RewriteRule ^super/client-documents/([^/]+)$ dashboard/su-document.php?id=$1 [QSA,L]
+RewriteRule ^super/create-client$ dashboard/su-company-update.php [QSA,L]
+RewriteRule ^super/create-user$ dashboard/su-create-user.php [QSA,L]
+RewriteRule ^super/edit-user/([^/]*)$ dashboard/su-create-user.php?id=$1 [QSA,L]
+
+RewriteRule ^super/client-contact/([^/]+)$ dashboard/su-client-contact.php?id=$1 [QSA,L]
+
+RewriteRule ^super/tickets$ dashboard/tickets.php [QSA,L]

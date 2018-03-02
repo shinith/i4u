@@ -1,0 +1,8 @@
+[27-Sep-2017 11:30:03 Etc/GMT] PHP Notice:  Undefined index: action in /home/alityartw/public_html/mobile/ajax/brand-ajax.php on line 9
+[27-Sep-2017 11:34:41 Etc/GMT] PHP Notice:  Undefined index: img in /home/alityartw/public_html/mobile/ajax/brand-ajax.php on line 42
+[28-Sep-2017 05:22:10 Etc/GMT] PHP Notice:  Undefined variable: imgname in /home/alityartw/public_html/mobile/ajax/brand-ajax.php on line 44
+[16-Oct-2017 12:11:00 Etc/GMT] PHP Notice:  Undefined index: action in /home/alityartw/public_html/mobile/ajax/brand-ajax.php on line 9
+[16-Oct-2017 12:11:58 Etc/GMT] PHP Notice:  Undefined variable: imgname in /home/alityartw/public_html/mobile/ajax/brand-ajax.php on line 44
+[16-Oct-2017 12:12:30 Etc/GMT] PHP Notice:  Undefined variable: imgname in /home/alityartw/public_html/mobile/ajax/brand-ajax.php on line 44
+[16-Oct-2017 12:12:31 Etc/GMT] PHP Notice:  Undefined variable: imgname in /home/alityartw/public_html/mobile/ajax/brand-ajax.php on line 44
+[16-Oct-2017 12:12:38 Etc/GMT] PHP Notice:  Undefined variable: imgname in /home/alityartw/public_html/mobile/ajax/brand-ajax.php on line 44

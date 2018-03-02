@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <column>40</column>
+  <mirror>15</mirror>
+  <gate>15</gate>
+  <stdsgamt>500</stdsgamt>
+  <clmamt>500</clmamt>
+  <mirramt>1500</mirramt>
+  <gtamt>400</gtamt>
+  <email>aruntk@alityart.in</email>
+  <admin>Vidyasagar</admin>
+  
+</config>
